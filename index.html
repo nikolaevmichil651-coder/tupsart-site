@@ -22,10 +22,8 @@
       <div class="container mx-auto px-4 py-3 flex items-center justify-between">
         <!-- Логотип и название -->
         <div class="flex items-center space-x-2">
-          <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
-            <!-- Placeholder для логотипа. Замените div на <img src="..." alt="Логотип ТупсАрт" /> -->
-            <span class="sr-only">Логотип ТупсАрт</span>
-          </div>
+          <!-- Реальный логотип вместо серого круга -->
+          <img src="logo.png" alt="Логотип ТупсАрт" class="w-10 h-10" />
           <span class="font-bold text-xl">ТупсАрт</span>
         </div>
         <!-- Навигация -->
@@ -57,30 +55,25 @@
 
     <!-- Основной контент -->
     <main class="pt-20"> <!-- отступ сверху чтобы не перекрывать фиксированную шапку -->
-      <!-- Hero-секция -->
-      <section class="relative bg-gray-50 py-20 px-4" id="hero">
+      <!-- Hero‑секция -->
+      <section class="relative bg-gradient-to-r from-yellow-300 via-orange-400 to-red-500 py-20 px-4 text-white" id="hero">
         <div class="container mx-auto grid lg:grid-cols-2 gap-8 items-center">
           <!-- Текстовый блок -->
           <div>
-            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">
               Создаем впечатление<br />через печать и дизайн
             </h1>
-            <p class="text-lg md:text-xl mb-8 text-gray-700 max-w-xl">
+            <p class="text-lg md:text-xl mb-8 text-white/90 max-w-xl">
               «ТупсАрт» — студия полиграфии и дизайна, где каждая печатная работа и каждый пиксель сайта отражают ваш стиль и ценности. Мы помогаем сохранять воспоминания, воплощать идеи и выделяться среди конкурентов.
             </p>
-            <a
-              href="https://wa.me/79148233021"
-              class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-md transition-colors"
-            >
+            <a href="https://wa.me/79148233021"
+               class="inline-block bg-black/60 hover:bg-black/70 text-white font-semibold px-6 py-3 rounded-md shadow-lg transition-colors">
               Сделать заказ через WhatsApp
             </a>
           </div>
-          <!-- Изображение или иллюстрация на главном экране -->
+          <!-- Иллюстрация: используем логотип в качестве крупного бренд-элемента -->
           <div class="hidden lg:block">
-            <!-- Вставьте иллюстрацию или фотографию сюда -->
-            <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
-              <span class="text-gray-400">Изображение/иллюстрация</span>
-            </div>
+            <img src="logo.png" alt="ТупсАрт бренд" class="max-w-md mx-auto lg:ml-auto" />
           </div>
         </div>
       </section>
