@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ТупсАрт – студия полиграфии и дизайна</title>
+    <!-- Tailwind CSS via CDN for rapid prototyping. 
+         В production этот файл лучше собрать самостоятельно, 
+         но для демонстрации проще подключить готовую библиотеку. -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Плавное прокручивание при переходе по якорям -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 font-sans leading-relaxed">
+    <!-- Шапка с навигацией -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 w-full z-50">
+      <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+        <!-- Логотип и название -->
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center">
+            <!-- Placeholder для логотипа. Замените div на <img src="..." alt="Логотип ТупсАрт" /> -->
+            <span class="sr-only">Логотип ТупсАрт</span>
+          </div>
+          <span class="font-bold text-xl">ТупсАрт</span>
+        </div>
+        <!-- Навигация -->
+        <nav>
+          <ul class="hidden md:flex space-x-6 text-sm">
+            <li><a href="#services" class="hover:text-blue-600">Услуги</a></li>
+            <li><a href="#process" class="hover:text-blue-600">Как заказать</a></li>
+            <li><a href="#contacts" class="hover:text-blue-600">Контакты</a></li>
+          </ul>
+        </nav>
+        <!-- Мобильное меню -->
+        <div class="md:hidden">
+          <button id="mobile-menu-toggle" class="focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- Раскрывающееся мобильное меню -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200">
+        <ul class="p-4 space-y-2">
+          <li><a href="#services" class="block py-2">Услуги</a></li>
+          <li><a href="#process" class="block py-2">Как заказать</a></li>
+          <li><a href="#contacts" class="block py-2">Контакты</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="pt-20"> <!-- отступ сверху чтобы не перекрывать фиксированную шапку -->
+      <!-- Hero-секция -->
+      <section class="relative bg-gray-50 py-20 px-4" id="hero">
+        <div class="container mx-auto grid lg:grid-cols-2 gap-8 items-center">
+          <!-- Текстовый блок -->
+          <div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 text-gray-900">
+              Создаем впечатление<br />через печать и дизайн
+            </h1>
+            <p class="text-lg md:text-xl mb-8 text-gray-700 max-w-xl">
+              «ТупсАрт» — студия полиграфии и дизайна, где каждая печатная работа и каждый пиксель сайта отражают ваш стиль и ценности. Мы помогаем сохранять воспоминания, воплощать идеи и выделяться среди конкурентов.
+            </p>
+            <a
+              href="https://wa.me/79148233021"
+              class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-md transition-colors"
+            >
+              Сделать заказ через WhatsApp
+            </a>
+          </div>
+          <!-- Изображение или иллюстрация на главном экране -->
+          <div class="hidden lg:block">
+            <!-- Вставьте иллюстрацию или фотографию сюда -->
+            <div class="w-full h-64 bg-gray-200 rounded-lg flex items-center justify-center">
+              <span class="text-gray-400">Изображение/иллюстрация</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок "Наши услуги" -->
+      <section id="services" class="py-20 px-4 bg-white">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-10">Наши услуги</h2>
+          <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <!-- Карточка полиграфии -->
+            <div class="p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-xl mb-2">Полиграфия</h3>
+              <p class="text-gray-700 mb-4">
+                Печать фотографий 10×15, документов форматов A4 и A3, ламинация и копирование. Современное оборудование обеспечивает четкость и насыщенность каждого изображения.
+              </p>
+            </div>
+            <!-- Карточка реставрации -->
+            <div class="p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-xl mb-2">Реставрация и ретушь</h3>
+              <p class="text-gray-700 mb-4">
+                Восстанавливаем старые снимки, исправляем повреждения и возвращаем цвет. Проведём аккуратную ретушь, сохраняя атмосферу и характер ваших фотографий.
+              </p>
+            </div>
+            <!-- Карточка дизайна -->
+            <div class="p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-xl mb-2">Дизайн</h3>
+              <p class="text-gray-700 mb-4">
+                Создаем уникальные логотипы, фирменный стиль и адаптивные сайты, которые выделяют вас на рынке и помогают выстраивать крепкие связи с клиентами.
+              </p>
+            </div>
+            <!-- Карточка сувениров и документов -->
+            <div class="p-6 bg-gray-50 border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+              <h3 class="font-semibold text-xl mb-2">Сувениры и документы</h3>
+              <p class="text-gray-700 mb-4">
+                Разрабатываем и печатаем грамоты, сертификаты, бланки и сувенирную продукцию. Ваши награды и подарки будут выглядеть достойно и профессионально.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Блок "Как заказать" -->
+      <section id="process" class="py-20 px-4 bg-gray-50">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-10">Как заказать</h2>
+          <div class="grid gap-8 md:grid-cols-3">
+            <!-- Шаг 1 -->
+            <div class="flex flex-col items-center p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+              <span class="text-4xl font-bold text-blue-600 mb-4">1</span>
+              <h3 class="font-semibold text-xl mb-2">Напишите нам</h3>
+              <p class="text-center text-gray-700">Свяжитесь через WhatsApp или Telegram. Расскажите о вашей задаче — это поможет нам понять, что именно вы хотите получить.</p>
+            </div>
+            <!-- Шаг 2 -->
+            <div class="flex flex-col items-center p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+              <span class="text-4xl font-bold text-blue-600 mb-4">2</span>
+              <h3 class="font-semibold text-xl mb-2">Отправьте фото или техзадание</h3>
+              <p class="text-center text-gray-700">Прикрепите исходные файлы или опишите желаемый результат. Мы предложим варианты и согласуем стоимость и сроки.</p>
+            </div>
+            <!-- Шаг 3 -->
+            <div class="flex flex-col items-center p-6 bg-white border border-gray-200 rounded-lg shadow-sm">
+              <span class="text-4xl font-bold text-blue-600 mb-4">3</span>
+              <h3 class="font-semibold text-xl mb-2">Заберите готовый заказ</h3>
+              <p class="text-center text-gray-700">Мы сообщим, когда все будет готово, и вы сможете получить вашу продукцию. Доставим удобным способом или встретимся лично.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Контакты -->
+      <section id="contacts" class="py-20 px-4 bg-white">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold text-center mb-10">Контакты</h2>
+          <div class="max-w-xl mx-auto space-y-6 text-center">
+            <p class="text-lg">
+              Мы рады ответить на ваши вопросы и принять заказ в любое удобное время. Выберите удобный способ связи и напишите нам:
+            </p>
+            <div class="space-y-2">
+              <p>Телефоны: <a href="tel:+79148233021" class="text-blue-600 hover:underline">8&nbsp;(914)&nbsp;823-30-21</a>, <a href="tel:+79247649992" class="text-blue-600 hover:underline">8&nbsp;(924)&nbsp;764-99-92</a></p>
+              <p>Электронная почта: <a href="mailto:nikolaevmichil651@gmail.com" class="text-blue-600 hover:underline">nikolaevmichil651@gmail.com</a></p>
+            </div>
+            <div class="flex justify-center space-x-6 mt-4">
+              <a href="https://wa.me/79148233021" class="bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-md" target="_blank" rel="noopener">WhatsApp</a>
+              <a href="https://t.me/+79247649992" class="bg-blue-500 hover:bg-blue-600 text-white px-5 py-3 rounded-md" target="_blank" rel="noopener">Telegram</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Подвал -->
+    <footer class="bg-gray-100 py-6 text-center text-sm text-gray-600">
+      <div class="container mx-auto">
+        © <script>document.write(new Date().getFullYear());</script> ТупсАрт. Все права защищены.
+      </div>
+    </footer>
+
+    <!-- Скрипт для мобильного меню -->
+    <script>
+      const toggleButton = document.getElementById('mobile-menu-toggle');
+      const mobileMenu = document.getElementById('mobile-menu');
+      toggleButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>
